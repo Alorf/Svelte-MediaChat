@@ -74,7 +74,6 @@
 
         axios.get(envurl + "/video-url?url=" + link).then(response => {
             data = response.data;
-            //https://cdn.discordapp.com/attachments/542023011029745674/1152616784218824724/zoinks.mp4
 
             if (data['url'] === "none") {
                 //writeInToast(fileToSend['message'])
@@ -274,7 +273,7 @@
                 <label for="link" class="label">
                     <span class="label-text">Lien d'un média</span>
                 </label>
-                <input id="link" type="text" bind:value={link} on:blur={updateLink} placeholder="Type here"
+                <input id="link" type="text" bind:value={link} on:blur={updateLink} placeholder="Lien d'un média"
                        class="input input-bordered w-full max-w-xs"/>
             </div>
 
@@ -284,7 +283,7 @@
                 <label for="discord" class="label">
                     <span class="label-text">Username Discord</span>
                 </label>
-                <input id="discord" type="text" placeholder="Type here" bind:value={username}
+                <input id="discord" type="text" placeholder="Username discord" bind:value={username}
                        class="input input-bordered w-full max-w-xs"/>
             </div>
 
